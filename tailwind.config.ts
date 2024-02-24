@@ -7,13 +7,20 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-      },
+    colors: {
+      primary: "#F5F5F5",
+      secondary: "#1F1F1F",
+      detail: "#D4C4A6",
+      detailHovered: "#EBE4D6",
+      textAlternate: "#828282",
     },
+    backgroundImage: {
+      "cta-pattern": "url('/cta-pattern.webp')",
+      "banner-pattern": "url('/banner-pattern.webp')",
+      "hero-pattern": "url('/hero-pattern.webp')",
+    },
+
+    extend: {},
   },
   plugins: [],
 };
