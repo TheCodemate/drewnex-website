@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import { Footer } from "@/components/Footer";
 import { Poppins } from "next/font/google";
-import { Header } from "../components/Header";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 import "./globals.css";
+import { MobileHeader } from "@/components/MobileHeader";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,9 +22,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${poppins.className} min-w-[360px] scroll-smooth`}>
+    <html className="scroll-smooth" lang="en">
+      <body className={`${poppins.className} min-w-[360px]`}>
         <Header />
+        <MobileHeader />
         {children}
         <Footer />
       </body>

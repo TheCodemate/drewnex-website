@@ -27,7 +27,7 @@ export const LocationSection = () => {
       initial="hide"
       whileInView="show"
       variants={introHeaderVariants}
-      className="relative flex flex-col justify-end md:block min-h-[512px] w-full py-[5%] px-[10%]"
+      className="relative flex flex-col items-center justify-end md:block min-h-[512px] w-full py-[5%] px-[10%]"
     >
       <div id="map">
         <DynamicMap />

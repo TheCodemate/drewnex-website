@@ -15,20 +15,20 @@ export const Feature = ({
 }: FeatureProps) => {
   return (
     <div
-      className={`flex flex-col gap-1 items-center  ${
-        reverse ? "md:flex-row-reverse" : "md:flex-row"
+      className={`flex flex-col gap-1 items-center  md:gap-8 ${
+        reverse ? "lg:flex-row-reverse" : "lg:flex-row"
       }`}
     >
       <div className="text-detail aspect-square min-w-10 max-w-14">{icon}</div>
       <div
         className={`flex flex-col gap-4 text-center ${
-          reverse ? "md:text-left" : "md:text-right"
+          reverse ? "lg:text-left" : "lg:text-right"
         }`}
       >
-        <h3 className="font-bold ">{heading}</h3>
+        <h3 className="font-bold text-nowrap ">{heading}</h3>
         <p
           className={`font-thin text-textAlternate text-sm text-center ${
-            reverse ? "md:text-left" : "md:text-right"
+            reverse ? "lg:text-left" : "lg:text-right"
           }`}
         >
           {content}

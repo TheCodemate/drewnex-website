@@ -29,7 +29,10 @@ const introHeaderVariants: Variants = {
 
 export const ProductSection = () => {
   return (
-    <section className="flex flex-col justify-center items-center px-[10%] py-[5%]">
+    <section
+      id="products-list"
+      className="flex flex-col justify-center items-center px-[10%] py-[5%]"
+    >
       <motion.div
         viewport={{ once: true }}
         initial="hide"
@@ -37,13 +40,16 @@ export const ProductSection = () => {
         variants={introHeaderVariants}
         className="flex flex-col  items-start md:items-center text-center w-full overflow-x-hidden"
       >
-        <h2 id="products-list" className="font-[100] text-[40px] mb-4">
+        <h2 className="font-[100] text-[40px] mb-4">
           Zapoznaj się z dostępnymi
           <b className="font-extrabold"> produktami</b>
         </h2>
         <p className="text-textAlternate mb-12 font-thin">
-          Rozbudowana oferta obejmuje zarówno produkty gotowe, dostępne od ręki
-          jak i towary wykonane na zamówienie wg. projektu
+          Prezentujemy naszą tradycyjną ofertę produktów tartacznych, opartą na
+          solidnych rzemieślniczych umiejętnościach i doświadczeniu. Znajdziesz
+          u nas wszystko, czego potrzebujesz, włączając w to możliwość
+          dostosowania produktu do Twoich potrzeb. Odkryj nasz świat drewnianych
+          rozwiązań i dołącz do naszej rodziny zadowolonych klientów.
         </p>
 
         <div className="flex lg:justify-center gap-4 mb-12 w-screen overflow-x-scroll px-[10%]">
@@ -51,9 +57,9 @@ export const ProductSection = () => {
             <div className="relative min-w-[240px] min-h-[300px] max-w-[300px] max-h-[380px] cursor-pointer">
               <Image
                 fill={true}
-                objectFit="cover"
+                objectFit="content"
                 objectPosition="center"
-                src={"/wiezba.webp"}
+                src={"/wiezba-dachowa.webp"}
                 alt="fragment konstrukcji drewnianej wiezby dachowej"
               />
             </div>
@@ -67,8 +73,8 @@ export const ProductSection = () => {
                 className="bg-blend-lighten hover:bg-blend-darken"
                 fill={true}
                 objectFit="cover"
-                objectPosition="center"
-                src={"/tarcica.webp"}
+                objectPosition="left"
+                src={"/tarcica-sucha.webp"}
                 alt="fragment konstrukcji drewnianej wiezby dachowej"
               />
             </div>
@@ -81,8 +87,8 @@ export const ProductSection = () => {
               <Image
                 fill={true}
                 objectFit="cover"
-                objectPosition="center"
-                src={"/opal.webp"}
+                objectPosition="right"
+                src={"/drewno-opalowe.webp"}
                 alt="fragment konstrukcji drewnianej wiezby dachowej"
               />
             </div>
@@ -95,8 +101,22 @@ export const ProductSection = () => {
               <Image
                 fill={true}
                 objectFit="cover"
-                objectPosition="center"
-                src={"/impregnacja.webp"}
+                objectPosition="right"
+                src={"/impregnacja-drewna.webp"}
+                alt="fragment konstrukcji drewnianej wiezby dachowej"
+              />
+            </div>
+            <div className="pt-6 px-6 font-bold">
+              <h3>Impregnacja</h3>
+            </div>
+          </div>
+          <div className="relative flex flex-col items-center max-w-[320px] max-h-[380px] cursor-pointer">
+            <div className="relative min-w-[240px] min-h-[300px] max-w-[300px] max-h-[380px] cursor-pointer">
+              <Image
+                fill={true}
+                objectFit="cover"
+                objectPosition="right"
+                src={"/impregnacja-drewna.webp"}
                 alt="fragment konstrukcji drewnianej wiezby dachowej"
               />
             </div>

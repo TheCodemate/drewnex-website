@@ -19,7 +19,7 @@ const introHeaderVariants: Variants = {
 const Phone = dynamic(() => import("@mui/icons-material/PhoneInTalk"));
 export const HeroSection = () => {
   return (
-    <div className="flex flex-col justify-center  bg-hero-pattern bg-cover p-[10%] max-h-screen">
+    <div className="flex flex-col justify-center  bg-hero-pattern bg-blend-darken bg-cover p-[10%] max-h-screen backdrop--50">
       <motion.div
         viewport={{ once: true }}
         initial="hide"

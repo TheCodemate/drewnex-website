@@ -13,6 +13,7 @@ const config: Config = {
       detail: "#D4C4A6",
       detailHovered: "#EBE4D6",
       textAlternate: "#828282",
+      backgroundDarkTransparent: "rgba(0,0,0, 0.9)",
     },
     backgroundImage: {
       "cta-pattern": "url('/cta-pattern.webp')",
