@@ -1,8 +1,8 @@
 "use client";
-import { CallToActionSection } from "@/components/CallToActionSection";
-import { motion, Variants } from "framer-motion";
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+import { motion, Variants } from "framer-motion";
+import { CallToActionSection } from "@/components/CallToActionSection";
 
 const introHeaderVariants: Variants = {
   hide: {
@@ -45,10 +45,9 @@ const elementSlidesInFromRight = {
   },
 };
 
-const Oferta = () => {
+const Products = () => {
   return (
     <main>
-      {/* hero section */}
       <section className="flex flex-col justify-center text-6xl sm:min-h-[342px]">
         <div className="flex flex-col min-h-[200px] justify-center bg-hero-pattern bg-center p-8 lg:min-h-[520px] py-4 xl:py-8 px-[2%] xl:px-[5%] gap-4 xl:gap-8">
           <motion.div
@@ -82,9 +81,7 @@ const Oferta = () => {
           </p>
         </motion.div>
       </section>
-      {/* product section */}
       <section className="">
-        {/* product 1 - tarcica */}
         <div className="flex flex-col border-b border-detail sm:flex-row">
           <motion.div
             viewport={{ once: true }}
@@ -261,6 +258,4 @@ const Oferta = () => {
   );
 };
 
-export default Oferta;
-
-// poprawić czcionke opisu na 16px
+export default Products;

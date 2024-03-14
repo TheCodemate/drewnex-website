@@ -13,7 +13,7 @@ const AccessAlarmIcon = dynamic(
   () => import("@mui/icons-material/AccessAlarm")
 );
 
-const introHeaderVariants: Variants = {
+const elementSlidesInFromBottom: Variants = {
   hide: {
     opacity: 0,
     y: 200,
@@ -37,7 +37,7 @@ export const FeatureSection = () => {
         viewport={{ once: true }}
         initial="hide"
         whileInView="show"
-        variants={introHeaderVariants}
+        variants={elementSlidesInFromBottom}
         className=" flex flex-col items-center"
       >
         <h2 className="font-[100] text-[40px] mb-4 text-center">

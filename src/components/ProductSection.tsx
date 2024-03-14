@@ -8,7 +8,7 @@ const ArrowRightAlt = dynamic(
 
 import { motion, Variants } from "framer-motion";
 
-const introHeaderVariants: Variants = {
+const elementSlidesInFromBottom: Variants = {
   hide: {
     opacity: 0,
     y: 200,
@@ -29,14 +29,14 @@ const introHeaderVariants: Variants = {
 export const ProductSection = () => {
   return (
     <section
-      id="products-list"
+      id="products"
       className="flex flex-col justify-center items-center px-[10%] py-[5%] scroll-mt-[152px]"
     >
       <motion.div
         viewport={{ once: true }}
         initial="hide"
         whileInView="show"
-        variants={introHeaderVariants}
+        variants={elementSlidesInFromBottom}
         className="flex flex-col  items-start md:items-center text-center w-full overflow-x-hidden"
       >
         <h2 className="font-[100] text-[40px] mb-4">
@@ -125,12 +125,12 @@ export const ProductSection = () => {
           </div>
         </div>
 
-        <div className="flex justify-center items-center w-full">
+        <div className="relative flex justify-center items-center w-full">
           <div className="absolute -z-10 top-[50%] left-0 h-[1px] w-full bg-detail"></div>
-          <div className="w-fit">
+          <div className="relative">
             <Link
-              className="relative flex gap-2 border border-detail px-8 py-5 rounded-lg flex-nowrap"
-              href={"/oferta"}
+              className="flex gap-2 border bg-secondary border-detail px-8 py-5 rounded-lg flex-nowrap"
+              href={"/products"}
             >
               Zobacz ofertę
               <span className="text-detail transform translate-x-0 group-hover:translate-x-2 transition-all">

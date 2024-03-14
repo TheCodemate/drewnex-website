@@ -2,7 +2,7 @@
 
 import { CallToActionSection } from "../components/CallToActionSection";
 import { Banner } from "../components/Banner";
-import { LocationSection } from "../components/LoctationSection";
+import { LocationSection } from "../components/LocationSection";
 import { ProductSection } from "@/components/ProductSection";
 import { HeroSection } from "@/components/HeroSection";
 import { FeatureSection } from "@/components/FeatureSection";

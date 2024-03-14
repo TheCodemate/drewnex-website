@@ -1,8 +1,7 @@
 "use client";
-import dynamic from "next/dynamic";
+import { useState } from "react";
 import Link from "next/link";
 import { Logo } from "./Logo";
-import { useState } from "react";
 import { useStickyMenu } from "@/hooks/useStickyMenu";
 
 export const MobileHeader = () => {

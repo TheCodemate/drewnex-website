@@ -4,7 +4,7 @@ import { motion, Variants } from "framer-motion";
 
 const Phone = dynamic(() => import("@mui/icons-material/Phone"));
 
-const introHeaderVariants: Variants = {
+const elementSlidesInFromBottom: Variants = {
   hide: {
     opacity: 0,
     y: 200,
@@ -25,7 +25,7 @@ export const CallToActionSection = () => {
         viewport={{ once: true }}
         initial="hide"
         whileInView="show"
-        variants={introHeaderVariants}
+        variants={elementSlidesInFromBottom}
         className="font-[100] text-4xl text-center leading-normal"
       >
         Nie znalazłeś potrzebnej <b className="font-extrabold">informacji?</b>
@@ -34,7 +34,7 @@ export const CallToActionSection = () => {
         viewport={{ once: true }}
         initial="hide"
         whileInView="show"
-        variants={introHeaderVariants}
+        variants={elementSlidesInFromBottom}
         className="font-light text-textAlternate text-center text-sm md:text-lg"
       >
         Skontaktuj się z nami telefonicznie, a my od ręku udzielimy Ci
@@ -45,7 +45,7 @@ export const CallToActionSection = () => {
         href="tel:+48600600600"
         initial="hide"
         whileInView="show"
-        variants={introHeaderVariants}
+        variants={elementSlidesInFromBottom}
         className="flex gap-2 border border-detail text-lg px-4 md:px-8 py-2 md:py-5 rounded-lg flex-nowrap cursor-pointer"
       >
         <span className="flex items-center font-bold">

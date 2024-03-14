@@ -4,11 +4,7 @@ import "leaflet/dist/leaflet.css";
 
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.webpack.css"; // Re-uses images from ~leaflet package
-import * as L from "leaflet";
 import "leaflet-defaulticon-compatibility";
-
-// import markerIconPng from "leaflet/dist/images/marker-icon.png";
-// import { Icon } from "leaflet";
 
 const position = { lat: 49.824689, long: 19.820512 };
 

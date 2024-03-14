@@ -1,8 +1,8 @@
 import dynamic from "next/dynamic";
-
 import { motion, Variants } from "framer-motion";
+const Phone = dynamic(() => import("@mui/icons-material/PhoneInTalk"));
 
-const introHeaderVariants: Variants = {
+const elementSlidesInFromLeft: Variants = {
   hide: {
     opacity: 0,
     x: -500,
@@ -16,7 +16,6 @@ const introHeaderVariants: Variants = {
   },
 };
 
-const Phone = dynamic(() => import("@mui/icons-material/PhoneInTalk"));
 export const HeroSection = () => {
   return (
     <div
@@ -27,7 +26,7 @@ export const HeroSection = () => {
         viewport={{ once: true }}
         initial="hide"
         whileInView="show"
-        variants={introHeaderVariants}
+        variants={elementSlidesInFromLeft}
         className="flex flex-col justify-center gap-8 w-full min-h-screen"
       >
         <h1 className="font-[200] text-5xl sm:text-4xl md:text-7xl leading-normal text-center md:text-left">
@@ -44,7 +43,7 @@ export const HeroSection = () => {
           href="tel:+48600600600"
           initial="hide"
           whileInView="show"
-          variants={introHeaderVariants}
+          variants={elementSlidesInFromLeft}
           className="flex gap-2 px-8 py-5 self-center md:self-auto text-secondary bg-detail border border-detail text-nowrap w-fit rounded-lg hover:bg-detailHovered "
         >
           <Phone />

@@ -1,11 +1,10 @@
 import dynamic from "next/dynamic";
-import DynamicMap from "./Map";
-
 import { motion, Variants } from "framer-motion";
+import DynamicMap from "./Map";
 
 const Phone = dynamic(() => import("@mui/icons-material/Phone"));
 
-const introHeaderVariants: Variants = {
+const elementSlidesInFromBottom: Variants = {
   hide: {
     opacity: 0,
     y: 200,
@@ -26,7 +25,7 @@ export const LocationSection = () => {
       viewport={{ once: true }}
       initial="hide"
       whileInView="show"
-      variants={introHeaderVariants}
+      variants={elementSlidesInFromBottom}
       className="relative flex flex-col items-center justify-end md:block min-h-[512px] w-full py-[5%] px-[10%] scroll-mt-[152px]"
     >
       <div id="map">

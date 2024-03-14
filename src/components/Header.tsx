@@ -30,7 +30,7 @@ export const Header = () => {
             <Link href="/#home">Strona główna</Link>
           </li>
           <li className="text-detail hover:text-primary active:text-primary hover:cursor-pointer">
-            <Link href="/#products-list">Oferta</Link>
+            <Link href="/#products">Oferta</Link>
           </li>
           <li className="text-detail hover:text-primary active:text-primary hover:cursor-pointer">
             <Link href="/#features">Korzyści</Link>

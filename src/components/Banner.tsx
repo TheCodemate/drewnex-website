@@ -2,7 +2,7 @@ import React from "react";
 
 import { motion, Variants } from "framer-motion";
 
-const introHeaderVariants: Variants = {
+const elementSlidesInFromRight: Variants = {
   hide: {
     opacity: 0,
     x: 200,
@@ -24,7 +24,7 @@ export const Banner = () => {
         viewport={{ once: true }}
         initial="hide"
         whileInView="show"
-        variants={introHeaderVariants}
+        variants={elementSlidesInFromRight}
         className="flex-1 flex flex-col justify-center items-right text-4xl lg:text-6xl pr-[10%] leading-relaxed"
       >
         <p className="font-[100] text-right">Ponad 30 lat</p>
