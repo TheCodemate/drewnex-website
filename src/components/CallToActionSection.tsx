@@ -40,8 +40,9 @@ export const CallToActionSection = () => {
         Skontaktuj się z nami telefonicznie, a my od ręku udzielimy Ci
         odpowiedzi
       </motion.span>
-      <motion.div
+      <motion.a
         viewport={{ once: true }}
+        href="tel:+48600600600"
         initial="hide"
         whileInView="show"
         variants={introHeaderVariants}
@@ -52,7 +53,7 @@ export const CallToActionSection = () => {
         </span>
         <span className="font-bold">Zadzwoń</span>
         <span className="font-light text-nowrap">+48 600 600 600</span>
-      </motion.div>
+      </motion.a>
     </section>
   );
 };

@@ -27,16 +27,16 @@ export const Header = () => {
       >
         <ul className="flex items-center py-8 flex-row grow-1 gap-10 font-bold text-nowrap text-detail active:text-primary w-full ">
           <li className="text-detail hover:text-primary active:text-primary hover:cursor-pointer">
-            <Link href="/">Strona główna</Link>
+            <Link href="/#home">Strona główna</Link>
           </li>
           <li className="text-detail hover:text-primary active:text-primary hover:cursor-pointer">
-            <Link href="#products-list">Oferta</Link>
+            <Link href="/#products-list">Oferta</Link>
           </li>
           <li className="text-detail hover:text-primary active:text-primary hover:cursor-pointer">
-            <Link href="#features">Korzyści</Link>
+            <Link href="/#features">Korzyści</Link>
           </li>
           <li className="text-detail hover:text-primary active:text-primary hover:cursor-pointer">
-            <Link href="#map-section">Jak dojechać?</Link>
+            <Link href="/#map-section">Jak dojechać?</Link>
           </li>
         </ul>
       </nav>
@@ -44,13 +44,16 @@ export const Header = () => {
         className="hidden lg:flex items-center gap-[5%]
       "
       >
-        <div className="flex gap-2 border border-detail  px-4 py-3 xl:px-8 xl:py-5  rounded-lg flex-nowrap">
+        <a
+          href="tel:+48600600600"
+          className="flex items-center gap-2 border border-detail  px-4 py-3 xl:px-8 xl:py-5  rounded-lg flex-nowrap"
+        >
           <span className="flex items-center font-bold">
             <Phone />
           </span>
           <span className="font-bold">Zadzwoń</span>
           <span className="font-light text-nowrap">+48 600 600 600</span>
-        </div>
+        </a>
       </div>
     </header>
   );

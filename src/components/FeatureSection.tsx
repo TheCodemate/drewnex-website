@@ -31,7 +31,7 @@ export const FeatureSection = () => {
   return (
     <section
       id="features"
-      className="flex flex-col justify-center items-center min-h-[512px] py-[5%] px-[10%]"
+      className="flex flex-col justify-center items-center min-h-[512px] py-[5%] px-[10%] scroll-mt-[152px]"
     >
       <motion.div
         viewport={{ once: true }}
@@ -51,7 +51,7 @@ export const FeatureSection = () => {
           drewna i elastyczne terminy realizacji to nasza odpowiedź na Twoje
           potrzeby.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-max px-[15%] py-[5%] items-start gap-y-10 md:gap-y-20 gap-x-5 md:gap-x-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-max px-[5%] py-[5%] items-start gap-y-10 md:gap-y-20 gap-x-5 md:gap-x-10">
           <Feature
             heading="Doradztwo i wsparcie"
             content="Będąc z nami, otrzymasz kompleksowe doradztwo i wsparcie od ekspertów z branży drzewnej. Nasz zespół pomoże Ci wybrać najlepsze rozwiązanie dla Twojego projektu, zawsze służąc fachową radą i pomocą."

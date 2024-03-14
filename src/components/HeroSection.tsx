@@ -19,7 +19,10 @@ const introHeaderVariants: Variants = {
 const Phone = dynamic(() => import("@mui/icons-material/PhoneInTalk"));
 export const HeroSection = () => {
   return (
-    <div className="flex flex-col justify-center  bg-hero-pattern bg-blend-darken bg-cover p-[10%] max-h-screen backdrop--50">
+    <div
+      id="home"
+      className="flex flex-col justify-center  bg-hero-pattern bg-blend-darken bg-cover p-[10%] max-h-screen backdrop--50"
+    >
       <motion.div
         viewport={{ once: true }}
         initial="hide"
@@ -36,11 +39,18 @@ export const HeroSection = () => {
           branzy i pomagamy w doborze jakościowego materiału
         </p>
 
-        <button className="flex gap-2 px-8 py-5 self-center md:self-auto text-secondary bg-detail border border-detail text-nowrap w-fit rounded-lg hover:bg-detailHovered ">
+        <motion.a
+          viewport={{ once: true }}
+          href="tel:+48600600600"
+          initial="hide"
+          whileInView="show"
+          variants={introHeaderVariants}
+          className="flex gap-2 px-8 py-5 self-center md:self-auto text-secondary bg-detail border border-detail text-nowrap w-fit rounded-lg hover:bg-detailHovered "
+        >
           <Phone />
           <span className="font-bold">Zadzwoń</span>
           <span className="font-thin">+48 600 600 600</span>
-        </button>
+        </motion.a>
       </motion.div>
     </div>
   );

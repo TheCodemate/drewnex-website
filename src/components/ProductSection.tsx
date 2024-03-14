@@ -1,7 +1,6 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const ArrowRightAlt = dynamic(
   () => import("@mui/icons-material/ArrowRightAlt")
@@ -31,7 +30,7 @@ export const ProductSection = () => {
   return (
     <section
       id="products-list"
-      className="flex flex-col justify-center items-center px-[10%] py-[5%]"
+      className="flex flex-col justify-center items-center px-[10%] py-[5%] scroll-mt-[152px]"
     >
       <motion.div
         viewport={{ once: true }}

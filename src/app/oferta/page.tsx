@@ -1,16 +1,72 @@
+"use client";
 import { CallToActionSection } from "@/components/CallToActionSection";
+import { motion, Variants } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+
+const introHeaderVariants: Variants = {
+  hide: {
+    opacity: 0,
+    y: 200,
+  },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+
+const elementSlidesInFromLeft = {
+  hide: {
+    opacity: 0,
+    x: -200,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+};
+const elementSlidesInFromRight = {
+  hide: {
+    opacity: 0,
+    x: 200,
+  },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 1,
+    },
+  },
+};
 
 const Oferta = () => {
   return (
     <main>
       {/* hero section */}
       <section className="flex flex-col justify-center text-6xl sm:min-h-[342px]">
-        <div className="flex flex-col min-h-[200px] justify-center bg-hero-pattern bg-center p-8 lg:min-h-[520px]">
-          <h1 className="font-[200]">Oferta</h1>
+        <div className="flex flex-col min-h-[200px] justify-center bg-hero-pattern bg-center p-8 lg:min-h-[520px] py-4 xl:py-8 px-[2%] xl:px-[5%] gap-4 xl:gap-8">
+          <motion.div
+            viewport={{ once: true }}
+            initial="hide"
+            whileInView="show"
+            variants={introHeaderVariants}
+          >
+            <h1 className="font-[200]">Oferta</h1>
+          </motion.div>
         </div>
-        <div className="flex-1 flex flex-col justify-center items-center text-xl p-8 text-center sm:min-h-[342px] sm:p-16">
+        <motion.div
+          viewport={{ once: true }}
+          initial="hide"
+          whileInView="show"
+          variants={introHeaderVariants}
+          className="flex-1 flex flex-col justify-center items-center text-xl p-8 text-center sm:min-h-[342px] sm:p-16"
+        >
           <h2 className="font-thin mb-4 text-4xl">
             Ponizej znajdziesz <span className="font-bold">opis produktów</span>{" "}
             dostępnych w ofercie
@@ -24,13 +80,19 @@ const Oferta = () => {
             dopasowane do Twoich potrzeb. Skontaktuj się z nami, aby dowiedzieć
             się więcej!
           </p>
-        </div>
+        </motion.div>
       </section>
       {/* product section */}
       <section className="">
         {/* product 1 - tarcica */}
         <div className="flex flex-col border-b border-detail sm:flex-row">
-          <div className="relative min-w-[240px] min-h-[300px] max-w-full max-h-[380px] sm:flex-1 sm:max-h-full">
+          <motion.div
+            viewport={{ once: true }}
+            initial="hide"
+            whileInView="show"
+            variants={elementSlidesInFromLeft}
+            className="relative min-w-[240px] min-h-[300px] max-w-full max-h-[380px] sm:flex-1 sm:max-h-full"
+          >
             <Image
               objectFit="cover"
               objectPosition="center"
@@ -38,9 +100,15 @@ const Oferta = () => {
               src="/tarcica-sucha.webp"
               alt="tarcica leząca jedna na drugiej"
             />
-          </div>
+          </motion.div>
           <div className="flex flex-col items-start gap-4 p-8 sm:flex-1 sm:p-0 sm:gap-0 ">
-            <div className="flex flex-col gap-4 p-0 sm:p-12 md:p-16 lg:p-24 xl:p-32">
+            <motion.div
+              viewport={{ once: true }}
+              initial="hide"
+              whileInView="show"
+              variants={elementSlidesInFromRight}
+              className="flex flex-col gap-4 p-0 sm:p-12 md:p-16 lg:p-24 xl:p-32"
+            >
               <h2 className="font-[200] text-4xl">Tarcica</h2>
               <span className="text-detail font-bold uppercase">
                 Podtytuł lorem ipsum
@@ -56,11 +124,17 @@ const Oferta = () => {
                 Niezależnie od projektu, który masz w planach, możesz być
                 pewien, że nasza tarcica będzie solidnym fundamentem.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className="flex flex-col border-b border-detail sm:flex-row-reverse">
-          <div className="relative min-w-[240px] min-h-[300px] max-w-full max-h-[380px] sm:flex-1 sm:max-h-full">
+          <motion.div
+            viewport={{ once: true }}
+            initial="hide"
+            whileInView="show"
+            variants={elementSlidesInFromRight}
+            className="relative min-w-[240px] min-h-[300px] max-w-full max-h-[380px] sm:flex-1 sm:max-h-full"
+          >
             <Image
               objectFit="cover"
               objectPosition="center"
@@ -68,9 +142,15 @@ const Oferta = () => {
               src="/wiezba-dachowa.webp"
               alt="tarcica leząca jedna na drugiej"
             />
-          </div>
+          </motion.div>
           <div className="flex flex-col items-start gap-4 p-8 sm:flex-1 sm:p-0 sm:gap-0 ">
-            <div className="flex flex-col gap-4 p-0 sm:p-12 md:p-16 lg:p-24 xl:p-32">
+            <motion.div
+              viewport={{ once: true }}
+              initial="hide"
+              whileInView="show"
+              variants={elementSlidesInFromLeft}
+              className="flex flex-col gap-4 p-0 sm:p-12 md:p-16 lg:p-24 xl:p-32"
+            >
               <h2 className="font-[200] text-4xl">Więźba dachowa</h2>
               <span className="text-detail font-bold uppercase">
                 Podtytuł lorem ipsum
@@ -86,11 +166,17 @@ const Oferta = () => {
                 Twojego projektu, zapewniając nie tylko funkcjonalność, ale
                 również estetyczny wygląd Twojego domu.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className="flex flex-col border-b border-detail sm:flex-row">
-          <div className="relative min-w-[240px] min-h-[300px] max-w-full max-h-[380px] sm:flex-1 sm:max-h-full">
+          <motion.div
+            viewport={{ once: true }}
+            initial="hide"
+            whileInView="show"
+            variants={elementSlidesInFromLeft}
+            className="relative min-w-[240px] min-h-[300px] max-w-full max-h-[380px] sm:flex-1 sm:max-h-full"
+          >
             <Image
               objectFit="cover"
               objectPosition="center"
@@ -98,9 +184,15 @@ const Oferta = () => {
               src="/impregnacja-drewna.webp"
               alt="tarcica leząca jedna na drugiej"
             />
-          </div>
+          </motion.div>
           <div className="flex flex-col items-start gap-4 p-8 sm:flex-1 sm:p-0 sm:gap-0 ">
-            <div className="flex flex-col gap-4 p-0 sm:p-12 md:p-16 lg:p-24 xl:p-32">
+            <motion.div
+              viewport={{ once: true }}
+              initial="hide"
+              whileInView="show"
+              variants={elementSlidesInFromRight}
+              className="flex flex-col gap-4 p-0 sm:p-12 md:p-16 lg:p-24 xl:p-32"
+            >
               <h2 className="font-[200] text-4xl">Impregnacja</h2>
               <span className="text-detail font-bold uppercase">
                 Podtytuł lorem ipsum
@@ -116,11 +208,17 @@ const Oferta = () => {
                 zapewni Ci spokój i pewność, że Twój drewniany projekt będzie
                 zachwycał przez wiele lat.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className="flex flex-col border-b border-detail sm:flex-row-reverse">
-          <div className="relative min-w-[240px] min-h-[300px] max-w-full max-h-[380px] sm:flex-1 sm:max-h-full">
+          <motion.div
+            viewport={{ once: true }}
+            initial="hide"
+            whileInView="show"
+            variants={elementSlidesInFromRight}
+            className="relative min-w-[240px] min-h-[300px] max-w-full max-h-[380px] sm:flex-1 sm:max-h-full"
+          >
             <Image
               objectFit="cover"
               objectPosition="center"
@@ -128,9 +226,15 @@ const Oferta = () => {
               src="/drewno-opalowe.webp"
               alt="tarcica leząca jedna na drugiej"
             />
-          </div>
+          </motion.div>
           <div className="flex flex-col items-start gap-4 p-8 sm:flex-1 sm:p-0 sm:gap-0 ">
-            <div className="flex flex-col gap-4 p-0 sm:p-12 md:p-16 lg:p-24 xl:p-32">
+            <motion.div
+              viewport={{ once: true }}
+              initial="hide"
+              whileInView="show"
+              variants={elementSlidesInFromLeft}
+              className="flex flex-col gap-4 p-0 sm:p-12 md:p-16 lg:p-24 xl:p-32"
+            >
               <h2 className="font-[200] text-4xl">Drewno opałowe</h2>
               <span className="text-detail font-bold uppercase">
                 Podtytuł lorem ipsum
@@ -148,7 +252,7 @@ const Oferta = () => {
                 drewno opałowe zapewni Ci niezawodne źródło ciepła przez cały
                 sezon grzewczy.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

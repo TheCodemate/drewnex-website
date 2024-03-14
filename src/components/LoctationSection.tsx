@@ -27,7 +27,7 @@ export const LocationSection = () => {
       initial="hide"
       whileInView="show"
       variants={introHeaderVariants}
-      className="relative flex flex-col items-center justify-end md:block min-h-[512px] w-full py-[5%] px-[10%]"
+      className="relative flex flex-col items-center justify-end md:block min-h-[512px] w-full py-[5%] px-[10%] scroll-mt-[152px]"
     >
       <div id="map">
         <DynamicMap />
@@ -42,13 +42,17 @@ export const LocationSection = () => {
           <span>ul. Wolności 29</span>
           <span>32-440 Sułkowice</span>
         </div>
-        <div className="flex  items-center justify-center gap-2 border md:w-fit border-detail text-sm md:text-log px-4 md:px-8 py-2 md:py-4 rounded-lg flex-wrap md:flex-nowrap cursor-pointer ">
+        <a
+          href="tel:+48600600600"
+          tabIndex={0}
+          className="flex  items-center justify-center gap-2 border md:w-fit border-detail text-sm md:text-log px-4 md:px-8 py-2 md:py-4 rounded-lg flex-wrap md:flex-nowrap cursor-pointer "
+        >
           <span className="flex items-center font-bold">
             <Phone />
           </span>
           <span className="font-bold">Zadzwoń</span>
           <span className="font-light text-nowrap">+48 600 600 600</span>
-        </div>
+        </a>
       </div>
     </motion.section>
   );
