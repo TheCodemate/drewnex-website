@@ -17,7 +17,7 @@ export const Footer = () => {
 
         <div className="flex-1 flex flex-row items-center justify-center gap-10 w-fit py-10 md:py-0">
           <nav className="flex flex-col items-center">
-            <ul className="flex items-center py-8 flex-row grow-1 gap-10 font-bold text-nowrap text-detail active:text-primary w-full ">
+            <ul className="flex flex-col items-center py-8 lg:flex-row grow-1 gap-10 font-bold text-nowrap text-detail active:text-primary w-full ">
               <li className="text-detail hover:text-primary active:text-primary hover:cursor-pointer">
                 <Link href="/#home">Strona główna</Link>
               </li>
