@@ -5,7 +5,7 @@ const Phone = dynamic(() => import("@mui/icons-material/PhoneInTalk"));
 const elementSlidesInFromLeft: Variants = {
   hide: {
     opacity: 0,
-    x: -500,
+    x: -300,
   },
   show: {
     opacity: 1,
@@ -38,18 +38,14 @@ export const HeroSection = () => {
           branzy i pomagamy w doborze jakościowego materiału
         </p>
 
-        <motion.a
-          viewport={{ once: true }}
+        <a
           href="tel:+48600600600"
-          initial="hide"
-          whileInView="show"
-          variants={elementSlidesInFromLeft}
           className="flex gap-2 px-8 py-5 self-center md:self-auto text-secondary bg-detail border border-detail text-nowrap w-fit rounded-lg hover:bg-detailHovered "
         >
           <Phone />
           <span className="font-bold">Zadzwoń</span>
           <span className="font-thin">+48 600 600 600</span>
-        </motion.a>
+        </a>
       </motion.div>
     </div>
   );
