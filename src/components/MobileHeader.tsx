@@ -14,7 +14,7 @@ export const MobileHeader = () => {
 
   return (
     <header
-      className={`z-50 flex w-full justify-between items-center py-4 xl:py-8 px-[2%] xl:px-[5%] gap-4 xl:gap-8 min-h-14 text-sm ${
+      className={`z-50 flex w-full justify-between items-center py-4 xl:py-8 px-[5%] xl:px-[5%] gap-4 xl:gap-8 min-h-14 text-sm ${
         isSticky
           ? "fixed top-0 left-0 shadow-md backdrop-blur backdrop-brightness-0"
           : "absolute bg-transparent"
@@ -35,29 +35,27 @@ export const MobileHeader = () => {
             onClick={onClickHandler}
             className="text-detail hover:text-primary active:text-primary hover:cursor-pointer"
           >
-            <Link href="#first-section">Strona główna</Link>
+            <Link href="/#home">Strona główna</Link>
           </li>
           <li
             onClick={onClickHandler}
             className="text-detail hover:text-primary active:text-primary hover:cursor-pointer"
           >
-            <Link href="#products-list">Oferta</Link>
+            <Link href="/#products">Oferta</Link>
           </li>
           <li
             onClick={onClickHandler}
             className="text-detail hover:text-primary active:text-primary hover:cursor-pointer"
           >
-            <Link href="#features">Korzyści</Link>
+            <Link href="/#features">Korzyści</Link>
           </li>
           <li
             onClick={onClickHandler}
             className="text-detail hover:text-primary active:text-primary hover:cursor-pointer"
           >
-            <Link href="#map-section">Jak dojechać?</Link>
+            <Link href="/#map-section">Jak dojechać?</Link>
           </li>
         </ul>
-
-        <button onClick={onClickHandler}>X</button>
       </nav>
       <button
         onClick={onClickHandler}
