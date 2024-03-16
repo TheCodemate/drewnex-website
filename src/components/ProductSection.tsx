@@ -47,7 +47,7 @@ export const ProductSection = () => {
           rozwiązań i dołącz do naszej rodziny zadowolonych klientów.
         </p>
 
-        <div className="flex lg:justify-center gap-4 mb-12 w-screen overflow-x-scroll px-[10%]">
+        <div className="flex lg:justify-center gap-4 mb-12 w-screen overflow-x-scroll no-scrollbar">
           <div className="relative flex flex-col items-center max-w-[320px] max-h-[380px] cursor-pointer">
             <div className="relative min-w-[240px] min-h-[300px] max-w-[300px] max-h-[380px] cursor-pointer">
               <Image
@@ -106,18 +106,10 @@ export const ProductSection = () => {
             </div>
           </div>
           <div className="relative flex flex-col items-center max-w-[320px] max-h-[380px] cursor-pointer">
-            <div className="relative min-w-[240px] min-h-[300px] max-w-[300px] max-h-[380px] cursor-pointer">
-              <Image
-                fill={true}
-                objectFit="cover"
-                objectPosition="right"
-                src={"/impregnacja-drewna.webp"}
-                alt="fragment konstrukcji drewnianej wiezby dachowej"
-              />
+            <div className="flex justify-center items-center min-w-[240px] min-h-[300px] max-w-[300px] max-h-[380px] border border-detail cursor-pointer">
+              <h3 className="font-bold">Inne...</h3>
             </div>
-            <div className="pt-6 px-6 font-bold">
-              <h3>Inne...</h3>
-            </div>
+            <div className="pt-6 px-6 font-bold"></div>
           </div>
         </div>
 
