@@ -12,16 +12,12 @@ const elementSlidesInFromBottom: Variants = {
   hide: {
     opacity: 0,
     y: 200,
-    top: 0,
-    left: 0,
   },
   show: {
     opacity: 1,
     y: 0,
-    top: 0,
-    left: 0,
     transition: {
-      duration: 1,
+      duration: 0.5,
     },
   },
 };

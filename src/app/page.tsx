@@ -9,7 +9,7 @@ import { FeatureSection } from "@/components/FeatureSection";
 
 export default function Home() {
   return (
-    <main className="flex flex-col overflow-x-hidden">
+    <main className="flex flex-col">
       <HeroSection />
       <ProductSection />
       <Banner />

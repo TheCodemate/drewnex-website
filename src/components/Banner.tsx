@@ -5,11 +5,11 @@ import { motion, Variants } from "framer-motion";
 const elementSlidesInFromRight: Variants = {
   hide: {
     opacity: 0,
-    x: 200,
+    y: 200,
   },
   show: {
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: {
       duration: 0.5,
     },
