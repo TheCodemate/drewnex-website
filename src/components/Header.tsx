@@ -25,22 +25,22 @@ export const Header = () => {
       <nav
         className={`flex-1 flex flex-row text-2xl lg:text-base  items-center w-full overflow-hidden shadow-lg lg:shadow-none transition-all`}
       >
-        <ul className="flex items-center py-8 flex-row grow-1 gap-10 font-bold text-nowrap text-detail active:text-primary w-full ">
-          <li className="text-detail hover:text-primary active:text-primary hover:cursor-pointer">
+        <ul className="flex py-8 flex-row justify-end grow-1 gap-10 font-bold text-nowrap text-detail active:text-primary w-full ">
+          <li className="text-primary hover:text-detail active:text-primary hover:cursor-pointer">
             <Link href="/#home">Strona główna</Link>
           </li>
-          <li className="text-detail hover:text-primary active:text-primary hover:cursor-pointer">
+          <li className="text-primary hover:text-detail active:text-primary hover:cursor-pointer">
             <Link href="/#products">Oferta</Link>
           </li>
-          <li className="text-detail hover:text-primary active:text-primary hover:cursor-pointer">
+          <li className="text-primary hover:text-detail active:text-primary hover:cursor-pointer">
             <Link href="/#features">Korzyści</Link>
           </li>
-          <li className="text-detail hover:text-primary active:text-primary hover:cursor-pointer">
+          <li className="text-primary hover:text-detail active:text-primary hover:cursor-pointer">
             <Link href="/#map-section">Jak dojechać?</Link>
           </li>
         </ul>
       </nav>
-      <div
+      {/* <div
         className="hidden lg:flex items-center gap-[5%]
       "
       >
@@ -54,7 +54,7 @@ export const Header = () => {
           <span className="font-bold">Zadzwoń</span>
           <span className="font-light text-nowrap">+48 600 600 600</span>
         </a>
-      </div>
+      </div> */}
     </header>
   );
 };

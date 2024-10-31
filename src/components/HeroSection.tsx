@@ -27,15 +27,15 @@ export const HeroSection = () => {
         initial="hide"
         whileInView="show"
         variants={elementSlidesInFromLeft}
-        className="flex flex-col justify-center gap-8 w-full min-h-screen"
+        className="flex flex-col justify-center items-center gap-12 min-h-screen"
       >
-        <h1 className="font-[200] text-5xl sm:text-4xl md:text-7xl leading-normal text-center md:text-left">
-          Produkujemy <b className="font-[600]">drewno</b>
-          <br /> i doradzamy w wyborze
+        <span className="text-5xl text-center text-detail">Tartak Drewnex</span>
+        <h1 className="font-[200] text-4xl sm:text-4xl md:text-7xl leading-normal text-center">
+          Twój sprawdzony dostawca wysokiej jakości drewna
         </h1>
-        <p className="md:w-[50%] text-lg sm:text-xl  font-thin text-center md:text-left text-textAlternate">
-          W naszym tartaku wspieramy klientów wieloletnim doświadczeniem w
-          branzy i pomagamy w doborze jakościowego materiału
+        <p className="md:w-[50%] text-lg sm:text-xl font-thin text-center text-textAlternate">
+          Oferujemy solidne materiały dla budownictwa oraz ambintych projektów
+          stolarskich.
         </p>
 
         <a

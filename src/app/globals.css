@@ -33,6 +33,7 @@
 body {
   color: var(--text-primary);
   background: var(--background-primary);
+  box-sizing: border-box;
 }
 
 @layer utilities {

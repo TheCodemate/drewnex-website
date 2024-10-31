@@ -12,7 +12,7 @@ const config: Config = {
       secondary: "#1F1F1F",
       detail: "#D4C4A6",
       detailHovered: "#EBE4D6",
-      textAlternate: "#828282",
+      textAlternate: "#C4C4C4",
       backgroundDarkTransparent: "rgba(0,0,0, 0.9)",
     },
     backgroundImage: {
