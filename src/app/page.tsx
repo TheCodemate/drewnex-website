@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { CallToActionSection } from "../components/CallToActionSection";
-import { Banner } from "../components/Banner";
-import { LocationSection } from "../components/LocationSection";
-import { ProductSection } from "@/components/ProductSection";
-import { HeroSection } from "@/components/HeroSection";
-import { FeatureSection } from "@/components/FeatureSection";
-import { AboutUs } from "@/components/AboutUs";
+import { CallToActionSection } from '../components/CallToActionSection';
+import { Banner } from '../components/Banner';
+import { LocationSection } from '../components/LocationSection';
+import { ProductSection } from '@/components/ProductSection/ProductSection';
+import { HeroSection } from '@/components/HeroSection';
+import { FeatureSection } from '@/components/FeatureSection';
+import { AboutUs } from '@/components/AboutUs';
 
 export default function Home() {
   return (
