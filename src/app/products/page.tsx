@@ -1,7 +1,7 @@
 'use client';
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { motion, Variants } from 'framer-motion';
+import { motion, Variants, AnimatePresence } from 'framer-motion';
 import { CallToActionSection } from '@/components/CallToActionSection';
 
 type ProductData = {
@@ -23,49 +23,82 @@ const elementSlideInVariants = (direction: 'left' | 'right') => ({
   show: { opacity: 1, x: 0, transition: { duration: 0.8 } },
 });
 
-const ProductCard: React.FC<ProductData> = ({
+const ProductCard: React.FC<ProductData & { index: number }> = ({
   title,
   subtitle,
   description,
   imageSrc,
   altText,
   reverse,
-}) => (
-  <div
-    className={`flex flex-col ${
-      reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'
-    } gap-8 mb-16`}
-  >
+  index,
+}) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const maxDescriptionLength = 150;
+  const shortDescription =
+    description.length > maxDescriptionLength
+      ? `${description.substring(0, maxDescriptionLength)}...`
+      : description;
+
+  return (
     <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      initial="hide"
-      whileInView="show"
-      variants={elementSlideInVariants(reverse ? 'right' : 'left')}
-      className="relative flex-1 min-w-[240px] min-h-[300px] max-w-full max-h-[380px] sm:max-h-full"
+      transition={{ duration: 0.5, delay: index * 0.1 }}
+      className={`flex flex-col ${
+        reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'
+      } gap-8 mb-16 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300`}
     >
-      <Image
-        objectFit="cover"
-        objectPosition="center"
-        fill={true}
-        src={imageSrc}
-        alt={altText}
-      />
+      <div className="relative flex-1 min-w-[240px] min-h-[300px] max-w-full max-h-[380px] sm:max-h-full overflow-hidden group">
+        <motion.div
+          viewport={{ once: true }}
+          initial="hide"
+          whileInView="show"
+          variants={elementSlideInVariants(reverse ? 'right' : 'left')}
+          className="w-full h-full"
+        >
+          <Image
+            objectFit="cover"
+            objectPosition="center"
+            fill={true}
+            src={imageSrc}
+            alt={altText}
+            className="group-hover:scale-105 transition-transform duration-500"
+          />
+        </motion.div>
+      </div>
+      <motion.div
+        viewport={{ once: true }}
+        initial="hide"
+        whileInView="show"
+        variants={elementSlideInVariants(reverse ? 'left' : 'right')}
+        className="flex-1 flex flex-col justify-center p-6 sm:p-8 lg:p-12 bg-gray-50 rounded-md"
+      >
+        <h2 className="text-3xl font-semibold text-gray-800 mb-2">{title}</h2>
+        <span className="text-lg font-thin text-gray-600 uppercase mb-6 text-detail">
+          {subtitle}
+        </span>
+        <AnimatePresence>
+          <motion.div
+            initial={{ height: 'auto' }}
+            animate={{ height: 'auto' }}
+            className="text-base text-gray-700 leading-relaxed"
+          >
+            {isExpanded ? description : shortDescription}
+          </motion.div>
+        </AnimatePresence>
+        {description.length > maxDescriptionLength && (
+          <button
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="mt-4 text-detail font-medium hover:underline self-start focus:outline-none focus:ring-2 focus:ring-detail rounded-md px-2"
+          >
+            {isExpanded ? 'Pokaż mniej' : 'Czytaj więcej'}
+          </button>
+        )}
+      </motion.div>
     </motion.div>
-    <motion.div
-      viewport={{ once: true }}
-      initial="hide"
-      whileInView="show"
-      variants={elementSlideInVariants(reverse ? 'left' : 'right')}
-      className="flex-1 flex flex-col justify-center p-6 sm:p-12 lg:p-16 bg-gray-50 rounded-md"
-    >
-      <h2 className="text-3xl font-semibold text-gray-800">{title}</h2>
-      <span className="text-lg font-thin text-gray-600 uppercase mb-6 text-detail">
-        {subtitle}
-      </span>
-      <p className="text-base text-gray-700 leading-relaxed">{description}</p>
-    </motion.div>
-  </div>
-);
+  );
+};
 
 const Products: React.FC = () => {
   const productData: ProductData[] = [
@@ -115,13 +148,14 @@ const Products: React.FC = () => {
 
   return (
     <main>
-      <section className="flex flex-col justify-center text-6xl sm:min-h-[342px]">
-        <div className="flex flex-col min-h-[200px] justify-center bg-hero-pattern bg-center p-8 lg:min-h-[520px] py-4 xl:py-8 px-[2%] xl:px-[5%] gap-4 xl:gap-8">
+      <section className="flex flex-col justify-center">
+        <div className="flex flex-col min-h-[200px] justify-center bg-hero-pattern bg-center bg-cover p-8 lg:min-h-[520px] py-4 xl:py-8 px-[2%] xl:px-[5%] gap-4 xl:gap-8">
           <motion.div
             viewport={{ once: true }}
             initial="hide"
             whileInView="show"
             variants={introHeaderVariants}
+            className="text-6xl backdrop-blur-sm bg-white/30 p-6 rounded-lg inline-block self-start"
           >
             <h1 className="font-[200]">Oferta</h1>
           </motion.div>
@@ -134,26 +168,45 @@ const Products: React.FC = () => {
           className="flex-1 flex flex-col justify-center items-center text-xl p-8 text-center sm:min-h-[342px] sm:p-16"
         >
           <h2 className="font-thin mb-4 text-4xl">
-            Ponizej znajdziesz <span className="font-bold">opis produktów</span>{' '}
+            Poniżej znajdziesz{' '}
+            <span className="font-bold text-detail">opis produktów</span>{' '}
             dostępnych w ofercie
           </h2>
-          <p className="font-normal text-textAlternate text-base sm:w-3/4">
+          <p className="font-normal text-textAlternate text-base sm:w-3/4 leading-relaxed">
             W naszym tartaku posiadamy szeroki wybór profesjonalnych produktów.
             Oferta obejmuje tarcicę suchą, sezonowaną, mokrą, więźby dachowe,
             impregnację drewna, drewno opałowe i wiele innych wysokiej jakości
             produktów. Pozyskiwane przez nas drewno pochodzi w głównej mierze z
             Polskich lasów Państwowych opierających swoją działalność na
             odpowiedniej gospodarce leśnej FSO® certyfikat PEFCTM. Z wieloletnim
-            doświadczeniem w branży drzewnej i pasją do precyzyjnej obróbki
+            doświadczeniem w branży drzewnej i pasją do precyzyjnej obróbki
             drewna, zapewniamy Ci kompleksową obsługę i produkty dopasowane do
             Twoich potrzeb. Skontaktuj się z nami, aby dowiedzieć się więcej.
           </p>
+          <div className="flex gap-4 mt-8">
+            <a
+              href="#produkty"
+              className="bg-detail text-white px-8 py-3 rounded-lg hover:bg-opacity-90 transition-all duration-300 font-medium"
+            >
+              Zobacz produkty
+            </a>
+            <a
+              href="tel:+48600600600"
+              className="border border-detail text-detail px-8 py-3 rounded-lg hover:bg-detail hover:text-white transition-all duration-300 font-medium"
+            >
+              Kontakt
+            </a>
+          </div>
         </motion.div>
       </section>
-      <section className="py-16 px-6 sm:px-12 lg:px-24 bg-white">
-        {productData.map((product, index) => (
-          <ProductCard key={index} {...product} />
-        ))}
+      <section id="produkty" className="py-16 px-6 sm:px-12 lg:px-24 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 gap-16">
+            {productData.map((product, index) => (
+              <ProductCard key={index} {...product} index={index} />
+            ))}
+          </div>
+        </div>
       </section>
       <CallToActionSection />
     </main>
