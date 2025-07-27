@@ -29,7 +29,10 @@ type Props = {
 
 const ProductCard = ({ productName, productImageUrl, altText }: Props) => {
   return (
-    <div className="relative flex flex-col items-center justify-center w-full max-h-[380px] cursor-pointer">
+    <Link
+      href="/products"
+      className="relative flex flex-col items-center justify-center w-full max-h-[380px] cursor-pointer"
+    >
       <div
         className={`relative min-w-[240px] min-h-[300px] w-full max-h-[380px] ${
           !productImageUrl && 'border border-detail'
@@ -48,7 +51,7 @@ const ProductCard = ({ productName, productImageUrl, altText }: Props) => {
       <div className="px-6 font-bold">
         <h3>{productName}</h3>
       </div>
-    </div>
+    </Link>
   );
 };
 
@@ -56,12 +59,12 @@ export const ProductSection = () => {
   const products = [
     {
       productName: 'Tarcica',
-      productImageUrl: '/tarcica-sucha.webp',
+      productImageUrl: '/gallery/Image21.48.33 (2)image1image.jpeg',
       altText: 'tarcica leząca jedna na drugiej',
     },
     {
       productName: 'Suszarnie komorowe',
-      productImageUrl: '/wiezba-dachowa.webp',
+      productImageUrl: '/gallery/Image21.48.35 (1)image1image.jpeg',
       altText: 'suszarnie komorowe drewna',
     },
     {
@@ -71,28 +74,24 @@ export const ProductSection = () => {
     },
     {
       productName: 'Impregnacja',
-      productImageUrl: '/impregnacja-drewna.webp',
+      productImageUrl:
+        '/gallery/WhatsApp Image 2025-07-06 at 21.48.36 (7).jpeg',
       altText: 'impregnacja drewna w procesie zanurzeniowym',
     },
     {
       productName: 'Drewno konstrukcyjne',
-      productImageUrl: '/tarcica-sucha.webp',
+      productImageUrl: '/gallery/Image21.48.35image1image.jpeg',
       altText: 'drewno konstrukcyjne dla projektów zewnętrznych',
     },
     {
       productName: 'Drewno opałowe',
-      productImageUrl: '/drewno-opalowe.webp',
+      productImageUrl: '/gallery/Image21.48.33 (4)image1image.jpeg',
       altText: 'fragment drewna opałowego gotowego do użytku',
     },
     {
       productName: 'Transport',
-      productImageUrl: '/impregnacja-drewna.webp',
+      productImageUrl: '/gallery/Image21.48.32 (3)image1image.jpeg',
       altText: 'transport drewna tartacznego',
-    },
-    {
-      productName: 'Inne...',
-      productImageUrl: '',
-      altText: 'inne produkty tartaczne',
     },
   ];
 
