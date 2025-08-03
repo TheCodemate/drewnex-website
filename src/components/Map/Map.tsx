@@ -137,7 +137,7 @@ const Map = () => {
             data-testid="address-card" // Identyfikator dla testów
           >
             <h2 className="font-thin text-xl md:text-2xl lg:text-3xl mb-3 md:mb-4 text-center">
-              Zobacz jak do nas dojechać
+              Adres lokalizacji
             </h2>
             <div className="flex flex-col items-start gap-1 mb-4 md:mb-5">
               <span className="font-bold text-detail text-sm md:text-base">
@@ -168,7 +168,9 @@ const Map = () => {
                   clipRule="evenodd"
                 />
               </svg>
-              <span className="whitespace-nowrap">Zobacz jak dojechać</span>
+              <span className="whitespace-nowrap">
+                Wyznacz trasę w Google Maps
+              </span>
             </button>
           </div>
 
