@@ -326,13 +326,13 @@ export const GallerySection = () => {
         className="flex flex-col items-center w-full"
       >
         <h2 className="font-[100] text-[40px] mb-4 text-center">
-          <b className="font-extrabold">Nasza </b>
-          galeria
+          <b className="font-extrabold">Zobacz </b>
+          jak pracujemy
         </h2>
         <p className="text-textAlternate text-center font-thin max-w-3xl mb-10">
-          Zobacz przykłady naszych produktów i realizacji. Każde zdjęcie
-          przedstawia wysoką jakość drewna, które oferujemy naszym klientom.
-          Kliknij na zdjęcie, aby zobaczyć je w pełnej okazałości.
+          Tutaj obejrzysz przykłady naszych produktów i realizacji. Każde
+          zdjęcie przedstawia wysoką jakość drewna, które oferujemy naszym
+          klientom. Kliknij na zdjęcie, aby zobaczyć je w pełnej okazałości.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 w-full">

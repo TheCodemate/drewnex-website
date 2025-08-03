@@ -1,8 +1,8 @@
-"use client";
-import dynamic from "next/dynamic";
-import { motion, Variants } from "framer-motion";
+'use client';
+import dynamic from 'next/dynamic';
+import { motion, Variants } from 'framer-motion';
 
-const Phone = dynamic(() => import("@mui/icons-material/Phone"));
+const Phone = dynamic(() => import('@mui/icons-material/Phone'));
 
 const elementSlidesInFromBottom: Variants = {
   hide: {
@@ -36,14 +36,14 @@ export const CallToActionSection = () => {
           odpowiedzi
         </span>
         <a
-          href="tel:+48600600600"
+          href="tel:+48 609 099 988"
           className="flex gap-2 border border-detail text-lg px-4 md:px-8 py-2 md:py-5 rounded-lg flex-nowrap cursor-pointer"
         >
           <span className="flex items-center font-bold">
             <Phone />
           </span>
           <span className="font-bold">Zadzwoń</span>
-          <span className="font-light text-nowrap">+48 600 600 600</span>
+          <span className="font-light text-nowrap">+48 609 099 988</span>
         </a>
       </motion.div>
     </section>

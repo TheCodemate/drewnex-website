@@ -1,6 +1,6 @@
-import dynamic from "next/dynamic";
-import { motion, Variants } from "framer-motion";
-const Phone = dynamic(() => import("@mui/icons-material/PhoneInTalk"));
+import dynamic from 'next/dynamic';
+import { motion, Variants } from 'framer-motion';
+const Phone = dynamic(() => import('@mui/icons-material/PhoneInTalk'));
 
 const elementSlidesInFromLeft: Variants = {
   hide: {
@@ -39,12 +39,12 @@ export const HeroSection = () => {
         </p>
 
         <a
-          href="tel:+48600600600"
+          href="tel:+48609099988"
           className="flex gap-2 px-8 py-5 self-center md:self-auto text-secondary bg-detail border border-detail text-nowrap w-fit rounded-lg hover:bg-detailHovered "
         >
           <Phone />
           <span className="font-bold">Zadzwoń</span>
-          <span className="font-thin">+48 600 600 600</span>
+          <span className="font-thin">+48 609 099 988</span>
         </a>
       </motion.div>
     </div>

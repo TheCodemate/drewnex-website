@@ -1,11 +1,11 @@
-import Link from "next/link";
-import dynamic from "next/dynamic";
+import Link from 'next/link';
+import dynamic from 'next/dynamic';
 
-import { Logo } from "./Logo";
+import { Logo } from './Logo';
 
-const Phone = dynamic(() => import("@mui/icons-material/Phone"));
-const Email = dynamic(() => import("@mui/icons-material/Email"));
-const LocationOn = dynamic(() => import("@mui/icons-material/LocationOn"));
+const Phone = dynamic(() => import('@mui/icons-material/Phone'));
+const Email = dynamic(() => import('@mui/icons-material/Email'));
+const LocationOn = dynamic(() => import('@mui/icons-material/LocationOn'));
 
 export const Footer = () => {
   return (
@@ -44,13 +44,13 @@ export const Footer = () => {
             <span className="text-detail">
               <Email />
             </span>
-            <span>biuro@drewnex.pl</span>
+            <span>tartak@drewnex.malopolska.pl</span>
           </div>
           <div className="flex items-center gap-1">
             <span className="text-detail">
               <Phone />
             </span>
-            <span>+48 600 600 600</span>
+            <span>+48 609 099 988</span>ś
           </div>
         </div>
       </div>

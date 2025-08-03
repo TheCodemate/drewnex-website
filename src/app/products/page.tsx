@@ -200,10 +200,10 @@ const Products: React.FC = () => {
               Zobacz produkty
             </a>
             <a
-              href="tel:+48600600600"
+              href="tel:+48609099988"
               className="border border-detail text-detail px-8 py-3 rounded-lg hover:bg-detail hover:text-primary transition-all duration-300 font-medium"
             >
-              +48 600 600 600
+              +48 609 099 988
             </a>
           </div>
         </motion.div>

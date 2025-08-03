@@ -173,14 +173,14 @@ const Map = () => {
           </div>
 
           {/* Warstwa do kliknięcia w mapę - zaktualizowana z-index */}
-          <div
+          {/* <div
             className="absolute inset-0 z-[5] cursor-pointer"
             onClick={openGoogleMapsDirections}
             onContextMenu={(e) => e.preventDefault()} // Blokuje menu kontekstowe
             title="Kliknij, aby wyznaczyć trasę"
             aria-label="Kliknij, aby wyznaczyć trasę do Drewnex"
             data-testid="map-click-layer" // Identyfikator dla testów
-          />
+          /> */}
         </>
       )}
     </div>
