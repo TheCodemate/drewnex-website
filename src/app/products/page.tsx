@@ -114,7 +114,7 @@ const Products: React.FC = () => {
       title: 'Drewno konstrukcyjne',
       subtitle: 'Sucha, sezonowana, mokra',
       description:
-        'Drewno konstrukcyjne które oferujemy to idealny wybór do budowy wiat, altan, dretuwni oraz mebli ogrodowych. Wykonane są z wysokiej jakości materiałów. Nasze drewno charakteryzuje się doskonałą trwałością i wytrzymałością co sprawia, że doskonale sprawdza się w różnych projektach zewnętznych. Oferujemy również możliwość suszenia oraz strugania co pozwala na uzyskanie gładkiej powierzchni i precyzyjnych wymiarów ułatwiających dalszą obróbkę i montaż. Dzięki szerokiemu asortymentowi z pewnością znajdziesz idealne rozwiązanie, które spełni Twoje oczekiwania. Zaufaj doświadczeniu i jakości. Wybierz nasze drwno i realizuj swoje pomysły z Drewnex.',
+        'Drewno konstrukcyjne, które oferujemy, to idealny wybór do budowy wiat, altan, drewutni oraz mebli ogrodowych. Wykonane z wysokiej jakości materiałów, charakteryzuje się doskonałą trwałością i wytrzymałością, co sprawia, że świetnie sprawdza się w różnego rodzaju projektach zewnętrznych. Oferujemy również możliwość suszenia i strugania, co pozwala uzyskać gładką powierzchnię oraz precyzyjne wymiary, ułatwiające dalszą obróbkę i montaż. Dzięki szerokiemu asortymentowi z pewnością znajdziesz rozwiązanie idealnie dopasowane do Twoich potrzeb. Zaufaj naszemu doświadczeniu i jakości. Wybierz drewno od Drewnex i realizuj swoje pomysły bez kompromisów.',
       imageSrc: '/gallery/Image21.48.33 (2)image1image.jpeg',
       altText: 'Tarcica leżąca jedna na drugiej',
       reverse: true,
