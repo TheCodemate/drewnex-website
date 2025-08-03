@@ -4,7 +4,7 @@ import tartak from '../app/assets/tartak_foto-01.webp';
 
 export const AboutUs = () => {
   return (
-    <div className={`flex flex-col items-center  md:gap-12 p-24`}>
+    <div className={`flex flex-col items-center  md:gap-12 px-24 py-12`}>
       <div className="flex flex-col items-center gap-4 flex-1">
         <h2 className="font-[100] text-[40px] mb-4">
           Witamy w<b className="font-extrabold"> Drewnex</b>
@@ -28,7 +28,7 @@ export const AboutUs = () => {
       </div>
       <div className="flex-1 w-screen min-h-[300px] relative">
         <Image
-          src={'/tartak_dron_sepia.jpg'}
+          src={'/tartak_foto-01.webp'}
           objectFit="cover"
           alt="zdjęcie z tartaku"
           fill={true}

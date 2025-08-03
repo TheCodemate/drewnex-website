@@ -111,13 +111,21 @@ const Products: React.FC = () => {
       altText: 'Tarcica leżąca jedna na drugiej',
     },
     {
+      title: 'Drewno konstrukcyjne',
+      subtitle: 'Sucha, sezonowana, mokra',
+      description:
+        'Aby sprostać różnorodnym potrzebom naszych klientów, oferujemy tarcicę wykonaną z wielu gatunków drewna liściastego, takich jak dąb, buk, dąb czerwony, jesion, jawor czy olcha, a także drewna iglastego, w tym jodły, sosny i świerku. Tarcica dostępna jest w różnych grubościach, długościach i klasach jakości, dostosowanych do indywidualnych wymagań. W naszym tartaku oferujemy tarcicę w trzech wariantach: mokrą – bezpośrednio po przetarciu, sezonowaną – po odpowiednim czasie leżakowania w przygotowanych warunkach, oraz suchą – suszoną w nowoczesnych suszarniach komorowych, osiągającą wilgotność na poziomie 8–10%. Dbamy o najwyższą jakość surowca i precyzję obróbki, korzystając z zaawansowanych pił taśmowych oraz profesjonalnych, certyfikowanych urządzeń tartacznych. Nasza tarcica wyróżnia się jakością, precyzją wykonania oraz możliwością dostosowania do indywidualnych potrzeb klienta. Niezależnie od tego, jaki projekt planujesz, możesz być pewien, że nasze wyroby będą solidnym fundamentem dla Twoich realizacji.',
+      imageSrc: '/gallery/Image21.48.33 (2)image1image.jpeg',
+      altText: 'Tarcica leżąca jedna na drugiej',
+      reverse: true,
+    },
+    {
       title: 'Suszarnie komorowe',
       subtitle: 'Klucz do jakości i trwałości drewna',
       description:
         'Nasz nowoczesny system suszenia drewna to zaawansowane rozwiązanie, które gwarantuje skuteczne i równomierne suszenie, kluczowe dla trwałości i jakości materiału. Dzięki zastosowaniu nowoczesnych technologii oraz precyzyjnego systemu kontroli, proces suszenia odbywa się w optymalnych warunkach, zapewniając równomierne usunięcie wilgoci oraz minimalizując ryzyko deformacji i pęknięć. Dostosowujemy program suszenia do gatunku i grubości drewna, aby osiągnąć najlepsze efekty. Stałe monitorowanie wilgotności i temperatury w trakcie procesu daje pewność, że drewno jest starannie przygotowane, co bezpośrednio przekłada się na jego trwałość i właściwości użytkowe. Wybierając nasze produkty po procesie suszenia, inwestujesz w materiał, który doskonale sprawdzi się w budownictwie, stolarstwie i meblarstwie. Zaufaj naszym rozwiązaniom i ciesz się najwyższą jakością, która pozwoli Ci realizować nawet najbardziej wymagające projekty.',
       imageSrc: '/gallery/Image21.48.35 (1)image1image.jpeg',
       altText: 'Suszarnia drewna',
-      reverse: true,
     },
     {
       title: 'Więźba dachowa',
@@ -126,6 +134,7 @@ const Products: React.FC = () => {
         'W naszym tartaku oferujemy kompletną więźbę dachową, obejmującą wszystkie niezbędne elementy, takie jak kantówki, łaty, kontrłaty, murłaty, płatwie oraz wszelkie nietypowe konstrukcje drewniane. Produkty konstrukcyjne wykonujemy z drewna iglastego o klasie jakości C24, pozyskiwanego z polskich lasów państwowych, zarządzanych zgodnie z zasadami zrównoważonej gospodarki leśnej. Dzięki naszemu doświadczeniu oraz zaawansowanym technologiom produkcji każda więźba dachowa tworzona jest z najwyższą starannością, gwarantując stabilność, wytrzymałość i trwałość konstrukcji. Dostosowujemy więźby dachowe do indywidualnych wymagań Twojego projektu, łącząc funkcjonalność z estetyką, aby dach Twojego domu nie tylko spełniał swoją rolę, ale również cieszył oko perfekcyjnym wykonaniem. Wybierz rozwiązanie, które zapewni Twojemu domowi solidne i niezawodne wsparcie.',
       imageSrc: '/gallery/Image21.48.35 (1)image1image.jpeg',
       altText: 'Więźba dachowa',
+      reverse: true,
     },
     {
       title: 'Impregnacja',
@@ -134,7 +143,6 @@ const Products: React.FC = () => {
         'Impregnacja to proces, który ma na celu przedłużyć żywotność drewna. W naszym tartaku stosujemy kompleksową impregnację drewna metodą zanurzeniową w wannie hydraulicznej. Technologia ta pozwala na równomierne i głębokie nasycenie impregnatem każdego elementu drewnianego. Używane przez nas środki impregnujące są produktami najwyższej jakości. Zabezpieczają wyroby drewniane przed grzybem, pleśnią oraz szkodnikami, a także zwiększają odporność na warunki atmosferyczne takie jak deszcz, śnieg i słońce. Kompleksowa, starannie przeprowadzona impregnacja przy użyciu środków spełniających odpowiednie standardy jakości daje nam poczucie gwarancji, że oddajemy w ręce naszych odbiorców produkty, które zachowują swój dobry wygląd i właściwości przez wiele lat.',
       imageSrc: '/gallery/WhatsApp Image 2025-07-06 at 21.48.36 (7).jpeg',
       altText: 'Impregnacja drewna',
-      reverse: true,
     },
     {
       title: 'Drewno opałowe',
@@ -143,6 +151,7 @@ const Products: React.FC = () => {
         'W ofercie naszego tartaku znajdziesz wysokiej jakości drewno opałowe, idealne zarówno do kominków, pieców kaflowych, jak i kotłów na biomasę. Oferujemy różne rodzaje drewna opałowego, w tym twarde gatunki, takie jak dąb, buk i jesion, oraz miękkie, takie jak jodła, sosna czy świerk. Drewno dostępne jest w formie grubych lub cieńszych zrzyn, a także pociętych i połupanych klocków, gotowych do bezpośredniego użycia. Nasze drewno jest starannie sezonowane, a w razie potrzeby podsuszane, co gwarantuje efektywne i ekologiczne spalanie. Dzięki 100% naturalnemu pochodzeniu, bez lakierów i chemikaliów, nasze drewno opałowe jest przyjazne środowisku i zapewnia niezawodne źródło ciepła przez cały sezon grzewczy. Wybierz nasze drewno opałowe i ciesz się ciepłem oraz wydajnością, na którą możesz liczyć.',
       imageSrc: '/gallery/Image21.48.33 (4)image1image.jpeg',
       altText: 'Drewno opałowe',
+      reverse: true,
     },
   ];
 
